@@ -1,0 +1,344 @@
+@charset "UTF-8";
+
+/* killogrammy styling script */
+/* importing of icon fonts */
+/* stylling content */
+/* default styles */
+@font-face {
+  font-family: kilogammieFont;
+  src: url(../icons/CrotahFreeVersionItalic-z8Ev3.ttf);
+}
+
+:root {
+  --purple: #8b3dff;
+}
+
+body
+{
+  margin: 0%;
+  padding: 0%;
+  overflow-x: hidden;
+}
+/* 2. navbar */
+.font-family {
+  font-family: kilogammieFont !important;
+}
+.sign_up {
+  background: var(--purple) !important;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: auto;
+}
+img {
+  filter: brightness(110%);
+}
+
+.shake1 {
+  animation-name: shake;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform-origin: 50% 100%;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(2px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-2deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(3deg);
+  }
+  30% {
+    transform: translate(0px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(2px, 1px) rotate(-2deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(4deg);
+  }
+  90% {
+    transform: translate(2px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+.linkupdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.linkupdownlist {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+.linkupdown:hover .linkupdownlist {
+  display: block;
+}
+.ulnavlist {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+
+
+
+/* responsive */
+
+
+/* Extra small devices (portrait phones, less than 576px)
+default  */
+
+@media (max-width: 575px)
+{
+  
+   .hide-sm-md
+   {
+       display: none !important;
+
+   }
+   .hide-res
+   {
+       display: none;
+
+   }
+   .hide_lg
+   {
+       display: block;
+   }
+   .details
+{
+display: block;
+
+
+}
+
+.pos-res{
+top: 0% !important;
+right: 0% !important;
+}
+.detail_res
+{
+   width: 100%;
+}
+.res_m
+{
+   flex-grow: 1;
+   text-align: center;
+   margin-top: 10px;
+}
+
+.res_bottom_nav
+{
+   display: flex !important;
+}
+
+}
+
+/* Small devices (landscape phones, 576px and up)
+(sm) small  */
+
+@media (min-width: 576px) and (max-width: 767px)
+{
+   body{
+       background-color: rgb(236, 233, 233) !important;
+   }
+   .upnav
+   {
+       display: none;
+   }
+   .hide-sm-md
+   {
+       display: none !important;
+
+   }
+   .hide-res
+   {
+       display: none;
+
+   }
+   
+
+
+   .pos-res{
+    top: 0% !important;
+    right: 0% !important;
+    }
+   .hide_lg
+   {
+       display: block;
+   }
+   .details
+{
+display: block;
+
+
+}
+.detail_res
+{
+   width: 100%;
+}
+.res_m
+{
+   flex-grow: 1;
+   text-align: center;
+   margin-top: 10px;
+}
+
+.res_bottom_nav
+{
+   display: flex !important;
+}
+
+
+
+}
+
+/* Medium devices (tablets, 768px and up)
+(md) medium  */
+
+@media (min-width: 768px) and (max-width: 991px) 
+{
+   body{
+       background-color: #ffffff;
+   }
+   .upnav
+   {
+       display: flex;
+   }
+   .hide-sm-md
+   {
+       display: none !important;
+
+   }
+
+   .hide-res
+   {
+       display: block;
+
+   }
+   .hide_lg
+   {
+       display: none;
+   }
+   .details
+{
+display: flex;
+
+
+}
+
+.res_bottom_nav
+{
+   display: flex !important;
+}
+
+}
+/* 
+Large devices (desktops, 992px and up)
+(lg) large  */
+
+@media (min-width: 992px) and (max-width: 1199px) 
+{
+   body{
+       background-color: #ffffff;
+   }
+   .upnav
+   {
+       display: flex;
+   }
+   .hide-sm-md
+   {
+       display: flex;
+
+   }
+
+   .hide-res
+   {
+       display: block;
+
+   }
+   .hide_lg
+   {
+       display: none;
+   }
+   .details
+{
+display: flex;
+
+
+}
+.res_bottom_nav
+{
+   display: none !important;
+}
+}
+/* 
+Extra large devices  */
+
+@media (min-width :1200px)
+{
+   body{
+       background-color: #ffffff;
+   }
+   .upnav
+   {
+       display: flex;
+   }
+   .hide-sm-md
+   {
+       display: flex;
+
+   }
+
+   .hide_res
+   {
+       display: block;
+
+   }
+
+   .hide_lg
+   {
+       display: none;
+   }
+   .details
+{
+display: flex;
+
+
+}
+.res_bottom_nav
+{
+   display: none !important;
+}
+
+
+
+}
+
+
