@@ -1,0 +1,87 @@
+<div class="d-dural-flex-child2 bg-light p-3" style="border-radius: 20px; border: 1px solid rgb(230, 227, 227);">
+                        
+                           
+  <form method="post" action="social_get.php" id="social">
+      <div class="form-floating mb-3">
+        <input type="Number" name="Phone" class="form-control" id="floatingInput" placeholder="">
+        <label for="floatingInput"> Phone Number</label>
+      </div><div class="form-floating mb-3">
+        <input type="text" name="wat" class="form-control" id="floatingInput" placeholder="">
+        <label for="floatingInput"> Whatsapp link</label>
+      </div>
+      <div class="form-floating mb-3">
+          <input type="text" name="fb" class="form-control" id="floatingInput" placeholder="">
+          <label for="floatingInput"> Facebook link</label>
+        </div>   <div class="form-floating mb-3">
+          <input type="text" name="inst" class="form-control" id="floatingInput" placeholder="">
+          <label for="floatingInput"> instagram link</label>
+        </div>
+            <hr class="my-4">
+
+      <button class="w-100 btn btn-lg btn-primary bg-twist" type="submit" style="border: none;">Edit</button>
+      <small class="text-muted">  </small>
+    </form>
+        
+
+
+
+                          
+                                        
+                                            
+</div>
+
+<div class="d-dural-flex-child1 p-3 ">
+
+
+  <h4 style="font-weight: bolder;">Alert</h4>
+  <small class="text-muted" id="datadiv">edit your social deatil link.</small>
+</div>
+
+</div>
+
+
+
+<script>
+  
+
+
+$("#social").on('submit',function(e){
+
+  e.preventDefault();
+
+$(this).ajaxSubmit({
+
+success: function(data){
+  var d = data;
+  var e =  2;
+  if (d == e) {
+    $("#datadiv").html('<strong style="color:green;">Updating......</strong>'); 
+
+setTimeout(function () {
+  // body...
+  $("#sign").html('<img src="ADMIN_files/sucess.jpg" style="transition: 1s; width: 50%;margin:auto;" id="iiii">'); 
+  setTimeout(function () {
+  // body...
+ $("#iiii").toggle();
+ setTimeout(function () {
+  // body...
+$space_nav_loader('social_link.html','sign','s-btn4');
+
+},1000);
+
+},3000);
+
+},3000);
+
+
+  }
+  else{
+$("#datadiv").html(data); 
+}
+} 
+
+});
+});
+
+
+</script>

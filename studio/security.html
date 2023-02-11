@@ -1,0 +1,82 @@
+<div class="d-dural-flex-child2 bg-light p-3" style="border-radius: 20px; border: 1px solid rgb(230, 227, 227);">
+                        
+
+    <form class="p-4 p-md-5 border rounded-3 bg-light" method="post" action="security-get.php" id="security">
+        <div class="form-floating mb-3">
+          <input type="email" name="email" required="" class="form-control" id="floatingInput" placeholder="name@example.com">
+          <label for="floatingInput">Email address</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="password" required="" name="oldpass" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div>   <div class="form-floating mb-3">
+            <input type="email" required="" name="newemail" class="form-control" id="floatingnewemail" placeholder="New email">
+            <label for="floatingnewemail">New email</label>
+          </div><div class="form-floating mb-3">
+            <input type="password" required="" name="newpass" class="form-control" id="floatingnewp" placeholder="new Password">
+            <label for="floatingnewp">New Password</label>
+          </div>
+        
+        <button class="w-100 btn btn-lg btn-primary bg-twist" type="submit" style="border: none;">Edit</button>
+        <hr class="my-4">
+        <small class="text-muted">Admin security editor </small>
+      </form>
+                             
+                                          
+                                              
+</div>
+
+<div class="d-dural-flex-child1 p-3 ">
+
+
+    <h4 style="font-weight: bolder;">Alert</h4>
+    <small class="text-muted" id="datadiv">Admin security editor once you edit there is no recovery</small>
+</div>
+
+</div>
+
+
+
+<script>
+  
+
+
+$("#security").on('submit',function(e){
+
+  e.preventDefault();
+
+$(this).ajaxSubmit({
+
+success: function(data){
+  var d = data;
+  var e =  2;
+  if (d == e) {
+    $("#datadiv").html('<strong style="color:green;">Updating......</strong>'); 
+
+setTimeout(function () {
+  // body...
+  $("#sign").html('<img src="ADMIN_files/sucess.jpg" style="transition: 1s; width: 50%;margin:auto;" id="iiii">'); 
+  setTimeout(function () {
+  // body...
+ $("#iiii").toggle();
+ setTimeout(function () {
+  // body...
+$space_nav_loader('Security.html','sign','s-btn8');
+},1000);
+
+},3000);
+
+},3000);
+
+
+  }
+  else{
+$("#datadiv").html(data); 
+}
+} 
+
+});
+});
+
+
+</script>
